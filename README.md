@@ -16,7 +16,7 @@ Desenvolva um projeto em grupo (tema livre) que aplique todo o conteúdo deste m
 - Seu banco de dados deve definir mais de uma tabela, relacionamentos e constraints.
 - Defina pelo menos um CRUD (create-read-update-delete).
 
-### SUMÁRIO
+# SUMÁRIO
 
 - Como clonar e iniciar o projeto
 - [Desenvolvedores] Como endereçar uma issue e criar uma branch
@@ -24,11 +24,34 @@ Desenvolva um projeto em grupo (tema livre) que aplique todo o conteúdo deste m
 - // TODO Diagramas e Relações de entidades
 - // 
 
-## Como clonar e iniciar o projeto
+# Como clonar e iniciar o projeto
 
-// TODO
+## Passo 1: Docker
 
-## [Desenvolvedores] Como endereçar uma issue e criar uma branch
+Seguindo o tutorial do Docker do curso Lets code vamos puxar a imagem do container Postgres
+
+```
+docker pull postgres
+docker run --name letscode-docker -e POSTGRES_PASSWORD=docker -d -p 5416:5432 postgres
+```
+
+**Observação 1:** [Nat] Tenho problemas regulares de alguma aplicação do meu docker competir com a porta 5432, por isso eu troco para a porta 5416 para ter certeza que não está tendo competição.
+
+Certifique-se que o docker está ativo na aplicação com `docker ps -a`.
+
+Fazer a conexão com o DBeaver. Lembre-se que o usuário padrão é `postgres` e a senha foi definida logo acima.
+
+![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/main/img/dbeaver_oyovI9pG5u.png)
+
+**Observação 2:** fiz algumas oprações no DBeaver e não atualizou que criei as tabelas... 😢 Usem o botão refresh regularmente.🔄🔄🔄🔄
+
+Em `src\main\resources\application.properties` já deve estar configurado para rodar o projeto conectado ao banco de dados.
+
+No IntelliJ será necessário substituir o `run` da aplicação em configurações usando `spring-boot::run`. A imagem abaixo é reciclagem de um dos tutoriais que eu fiz.
+
+![]https://raw.githubusercontent.com/NatSatie/StudyNotes/main/letsCode/setupMavenRun.png()
+ 
+# [Desenvolvedores] Como endereçar uma issue e criar uma branch
 
 Faça login no Github e ver o [esse link](https://github.com/NatSatie/letscode-projeto2/projects/1). Temos 5 colunas no projeto
 
