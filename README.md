@@ -30,7 +30,7 @@ Desenvolva um projeto em grupo (tema livre) que aplique todo o conteúdo deste m
 
 ## [Desenvolvedores] Como endereçar uma issue e criar uma branch
 
-Faça login no Github e ver o [esse link](https://github.com/users/NatSatie/projects/2). Temos 5 colunas no projeto
+Faça login no Github e ver o [esse link](https://github.com/NatSatie/letscode-projeto2/projects/1). Temos 5 colunas no projeto
 
 - A desenvolver
 - em desenvolvimento
