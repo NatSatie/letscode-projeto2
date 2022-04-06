@@ -24,10 +24,10 @@ public class Aluno {
     @Column(name = "data_nascimento", nullable = false)
     private LocalDate dataNascimento;
 
-    public Aluno(String nome, String matricula, LocalDate data_nascimento) {
+    public Aluno(String nome, String matricula, LocalDate dataNascimento) {
         this.nome = nome;
         this.matricula = matricula;
-        this.dataNascimento = data_nascimento;
+        this.dataNascimento = dataNascimento;
     }
 }
 
