@@ -18,8 +18,8 @@ public class Historico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(nullable = false)
-    private Double percentual_acerto;
+    @Column(name = "percentual_acerto", nullable = false)
+    private Double percentualAcerto;
     @ManyToOne
     @JoinColumn(name = "disciplina_id", nullable = false)
     private Disciplina disciplina;
@@ -27,8 +27,8 @@ public class Historico {
     @JoinColumn(name = "aluno_id", nullable = false)
     private Aluno aluno;
 
-    public Historico(Double percentual_acerto, Disciplina disciplina, Aluno aluno) {
-        this.percentual_acerto = percentual_acerto;
+    public Historico(Double percentualAcerto, Disciplina disciplina, Aluno aluno) {
+        this.percentualAcerto = percentualAcerto;
         this.disciplina = disciplina;
         this.aluno = aluno;
     }
