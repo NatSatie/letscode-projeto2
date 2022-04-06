@@ -20,14 +20,14 @@ public class Alternativa {
     @Column(nullable = false)
     private String descricao;
     @Column(nullable = false)
-    private Boolean eh_resposta;
+    private Boolean ehResposta;
     @ManyToOne
     @JoinColumn(name = "questao_id", nullable = false)
     private Questao questao;
 
-    public Alternativa(String descricao, Boolean eh_resposta, Questao questao) {
+    public Alternativa(String descricao, Boolean ehResposta, Questao questao) {
         this.descricao = descricao;
-        this.eh_resposta = eh_resposta;
+        this.ehResposta = ehResposta;
         this.questao = questao;
     }
 }
