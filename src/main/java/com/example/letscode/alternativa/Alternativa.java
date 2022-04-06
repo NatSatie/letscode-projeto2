@@ -19,7 +19,7 @@ public class Alternativa {
     private Integer id;
     @Column(nullable = false)
     private String descricao;
-    @Column(nullable = false)
+    @Column(name = "eh_resposta", nullable = false)
     private Boolean ehResposta;
     @ManyToOne
     @JoinColumn(name = "questao_id", nullable = false)

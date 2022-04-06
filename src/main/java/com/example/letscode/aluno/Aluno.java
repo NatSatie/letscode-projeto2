@@ -21,7 +21,7 @@ public class Aluno {
     private String nome;
     @Column(nullable = false)
     private String matricula;
-    @Column(name = "data_nascimento")
+    @Column(name = "data_nascimento", nullable = false)
     private LocalDate dataNascimento;
 
     public Aluno(String nome, String matricula, LocalDate data_nascimento) {
