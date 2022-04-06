@@ -24,4 +24,10 @@ public class Alternativa {
     @ManyToOne
     @JoinColumn(name = "questao_id", nullable = false)
     private Questao questao;
+
+    public Alternativa(String descricao, Boolean eh_resposta, Questao questao) {
+        this.descricao = descricao;
+        this.eh_resposta = eh_resposta;
+        this.questao = questao;
+    }
 }
