@@ -2,7 +2,12 @@
 
 Projeto de banco de dados realizado por:
 
-// adicionar nomes
+- Carlos Masao Mito
+- Caroline Fernanda Bezerra de Oliveira
+- João Vitor de Paula Pereira
+- Marcos Roberto Franciosi
+- Natalia Satie Odashima
+- Pedro Otávio Freiman Blaudt
 
 Tema do projeto: Aplicativo de simulados
 Especificações:
