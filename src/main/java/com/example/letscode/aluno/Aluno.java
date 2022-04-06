@@ -21,12 +21,13 @@ public class Aluno {
     private String nome;
     @Column(nullable = false)
     private String matricula;
-    private LocalDate data_nascimento;
+    @Column(name = "data_nascimento")
+    private LocalDate dataNascimento;
 
     public Aluno(String nome, String matricula, LocalDate data_nascimento) {
         this.nome = nome;
         this.matricula = matricula;
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = data_nascimento;
     }
 }
 
