@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface QuestaoRepository extends JpaRepository<Questao, Integer> {
-
+    Questao findQuestaoById(Integer id);
 }
