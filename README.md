@@ -8,7 +8,7 @@ Projeto de banco de dados realizado por:
 - Caroline Fernanda Bezerra de Oliveira
 - João Vitor de Paula Pereira
 - Marcos Roberto Franciosi
-- Natalia Satie Odashima
+- Natália Satie Odashima
 - Pedro Otávio Freiman Blaudt
 
 **Tema do projeto:** Aplicativo de simulados.
@@ -29,15 +29,37 @@ Desenvolva um projeto em grupo (tema livre) que aplique todo o conteúdo deste m
 # SUMÁRIO
 
 1. [Apresentação do projeto](#apresentação-do-projeto)
-2. [Como clonar e iniciar o projeto](#como-clonar-e-iniciar-o-projeto)
-3. [Diagramas e relações de entidades](#diagramas-e-relações-de-entidades)
+2. [Diagramas e relações de entidades](#diagramas-e-relações-de-entidades)
+3. [Como clonar e iniciar o projeto](#como-clonar-e-iniciar-o-projeto)
 4. 
-5. [\[Desenvolvedores\] Como endereçar uma issue e criar uma branch](#[desenvolvedores]-como-endereçar-uma-issue-e-criar-uma-branch)
+5. [Desenvolvedores] [Como endereçar uma issue e criar uma branch](#como-endereçar-uma-issue-e-criar-uma-branch)
 
 
 # Apresentação do projeto
 
-**_TODO:_** Explicar como o aplicativo funciona
+O objetivo do projeto proposto é auxiliar os professores na aplicação de provas para seus alunos. Os estudantes irão se inscrever em diferentes disciplinas, essas por sua vez serão ministradas por um único docente. 
+
+Os professores podem gerenciar diversas matérias, sendo que cada 
+
+O professor 
+
+O número de questões por simulado será fixo (5 questões por simulado).
+
+# Diagramas e relações de entidades
+
+Abaixo estão alguns diagramas representando o banco de dados modelado.
+
+![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/main/img/diagram1.png)
+![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/main/img/diagram2.png)
+
+### Entidades
+
+- **Aluno:** entidade que representa um aluno no sistema;
+- **Professor:** entidade que representa um professor no sistema;
+- **Disciplina:** ;
+- **Questão:** ;
+- **Alternativa:** ; 
+- **Histórico:** entidade que irá guardar o desempenho do aluno em determinada disciplina.
 
 # Como clonar e iniciar o projeto
 
@@ -61,7 +83,9 @@ Lembre-se que o usuário padrão é `postgres` e a senha foi definida logo acima
 
 ![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/main/img/dbeaver_oyovI9pG5u.png)
 
-**Observação 2:** Fiz algumas oprações no DBeaver e não atualizou que criei as tabelas... 😢 Usem o botão refresh regularmente.🔄🔄🔄🔄
+**Observação 2:** [Nat] Fiz algumas operações no DBeaver e não atualizou que criei as tabelas... 😢 Usem o botão refresh regularmente.🔄🔄🔄🔄
+
+## Passo 3: Rodar a aplicação pelo IntelliJ
 
 Em `src\main\resources\application.properties` já deve estar configurado para rodar o projeto conectado ao banco de dados.
 
@@ -73,9 +97,6 @@ No IntelliJ será necessário substituir o `run` da aplicação em configuraçõ
 
 
 
-# Diagramas e relações de entidades
-
-**_TODO:_** Adicionar imagens
 
 
 
@@ -84,19 +105,17 @@ No IntelliJ será necessário substituir o `run` da aplicação em configuraçõ
 
 
 
+# Como endereçar uma issue e criar uma branch
 
+Faça login no Github e acesse [esse link](https://github.com/NatSatie/letscode-projeto2/projects/1). Temos 5 colunas no projeto:
 
-# [Desenvolvedores] Como endereçar uma issue e criar uma branch
+- **A desenvolver:** backlog de atividades a serem desenvolvidas;
+- **Em desenvolvimento:** tarefas que estão em desenvolvimento;
+- **Auditoria:** serve para testar o código e revisar as alterações;
+- **Pronto:** pilha com as atividades finalizadas;
+- **Tutorial / Observações:** amostras de cards de projeto para usar de referência.
 
-Faça login no Github e ver o [esse link](https://github.com/NatSatie/letscode-projeto2/projects/1). Temos 5 colunas no projeto
-
-- A desenvolver
-- em desenvolvimento
-- auditoria: serve para testar o código e revisar
-- pronto
-- tutorial: amostras de cards de projeto para usar de referência
-
-Veja se sua tarefa está associada a um dos cards. Caso não esteja, use o botão + para adicionar um card novo e e escreva as especificações de sua tarefa.
+Veja se sua tarefa está associada a um dos cards. Caso não esteja, use o botão `+` para adicionar um card novo e escreva as especificações de sua tarefa.
 
 ![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/main/img/passo1.gif)
 
@@ -120,11 +139,11 @@ Vamos commitar todas nossas alterações e dar push no Github, certifique-se que
 
 ### Crie o PR
 
-Finalmente tudo comitado e feito podemos fazer o nosso PR. como podemos ver no Github Desktop e no Github, jé temos uma notificação de soltar um PR.
+Finalmente tudo comitado e feito podemos fazer o nosso PR. como podemos ver no Github Desktop e no Github, já temos uma notificação de soltar um PR.
 
 ![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/main/img/passo6.png)
 
 ![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/main/img/passo7.png)
 
 
-// Terminar tutorial
+**_TODO:_** Terminar tutorial
