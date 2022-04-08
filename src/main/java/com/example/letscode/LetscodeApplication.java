@@ -35,7 +35,6 @@ public class LetscodeApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		List<Aluno> listaAluno = BootstrapData.buildAluno();
-		System.out.println(listaAluno);
 		alunoRepository.saveAll(listaAluno);
 		List<Professor> listaProfessor = BootstrapData.buildProfessor();
 		professorRepository.saveAll(listaProfessor);
