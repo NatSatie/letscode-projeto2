@@ -31,7 +31,7 @@ create table questao (
 
 create table alternativa (
 	id int not null generated always as identity,
-	descricao varchar(50) not null,
+	descricao text not null,
 	eh_resposta boolean not null,
 	questao_id int not null,
 	constraint questao_fk foreign key (questao_id) references questao(id),
