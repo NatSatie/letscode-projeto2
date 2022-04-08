@@ -4,6 +4,7 @@ import com.example.letscode.alternativa.AlternativaRepository;
 import com.example.letscode.aluno.Aluno;
 import com.example.letscode.aluno.AlunoRepository;
 import com.example.letscode.data.BootstrapData;
+import com.example.letscode.data.QuestaoAlternativaTupla;
 import com.example.letscode.disciplina.Disciplina;
 import com.example.letscode.disciplina.DisciplinaRepository;
 import com.example.letscode.professor.Professor;
@@ -40,6 +41,9 @@ public class LetscodeApplication implements CommandLineRunner {
 		professorRepository.saveAll(listaProfessor);
 		List<Disciplina> listaDisciplina = BootstrapData.buildDisciplina(professorRepository.findProfessorById(1));
 		disciplinaRepository.saveAll(listaDisciplina);
+		QuestaoAlternativaTupla tupla = BootstrapData.buildQuestaoAlternativaBancoDeDados(disciplinaRepository.findDisciplinaById(1));
+		questaoRepository.saveAll(tupla.getListaQuestao());
+		alternativaRepository.saveAll(tupla.getListaAlternativa());
 	}
 }
 
