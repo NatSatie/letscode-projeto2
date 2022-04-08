@@ -32,9 +32,51 @@ public class BootstrapData {
                                 new AlternativaResposta("SELECT Tipo, AVG (Quantidade) FROM Item GROUP BY Tipo HAVING AVG (Quantidade) > 500;", true),
                                 new AlternativaResposta("SELECT Tipo, MED (Quantidade) FROM Item GROUP BY Tipo WHERE MED (Quantidade) > 500;", false),
                                 new AlternativaResposta("SELECT Tipo, MAX - MIN (Quantidade) FROM Item GROUP BY Tipo FOR MAX – MIN (Quantidade) > 500;", false)
+                        )),
+                new QuestaoAlternativaResposta(
+                "Considerando um banco de dados relacional, sobre o conceito de Chave estrangeira, assinale a alternativa correta.",
+                        Arrays.asList(
+                        new AlternativaResposta("Uma coluna contendo uma chave estrangeira não pode ter valores nulos.", false),
+                        new AlternativaResposta("Uma tabela não pode ter mais de uma chave estrangeira para outra tabela (mesma tabela de referência).", false),
+                        new AlternativaResposta("Um índice é criado por padrão para cada chave estrangeira.", false),
+                        new AlternativaResposta("Uma coluna contendo uma chave estrangeira guarda o endereço de memória da coluna correspondente na tabela referenciada.", false),
+                        new AlternativaResposta("Uma chave estrangeira pode ser composta por várias colunas.", true)
+                )),
+                new QuestaoAlternativaResposta(
+                "Não pode ter valor nulo em uma tabela do banco de dados um campo: ",
+                        Arrays.asList(
+                        new AlternativaResposta("Uma coluna contendo uma chave estrangeira não pode ter valores nulos.", false),
+                        new AlternativaResposta("Uma tabela não pode ter mais de uma chave estrangeira para outra tabela (mesma tabela de referência).", false),
+                        new AlternativaResposta("Um índice é criado por padrão para cada chave estrangeira.", false),
+                        new AlternativaResposta("Uma coluna contendo uma chave estrangeira guarda o endereço de memória da coluna correspondente na tabela referenciada.", false),
+                        new AlternativaResposta("Uma chave estrangeira pode ser composta por várias colunas.", true)
+                )),
+                new QuestaoAlternativaResposta(
+                        "Em um banco de dados, uma das principais restrições é a que define que, em uma relação entre duas tabelas, a chave estrangeira que aparece em uma delas deve existir como chave primária na outra, de forma que só será aceito um valor no campo chave estrangeira se esse valor existir no campo chave primária. Tal restrição é conhecida como",
+                        Arrays.asList(
+                        new AlternativaResposta("integridade da coluna.",  false),
+                        new AlternativaResposta("integridade referencial.", true),
+                        new AlternativaResposta("integridade de herança.", false),
+                        new AlternativaResposta("restrição de chave.", false)
+                )),
+                 new QuestaoAlternativaResposta(
+                         "Em modelagem de dados a cardinalidade é um dos princípios fundamentais sobre relacionamento de um banco de dados relacional. No modelo relacional, podemos ter os seguintes níveis clássicos de relacionamento. Sobre eles, assinale a alternativa incorreta.",
+                         Arrays.asList(
+                        new AlternativaResposta("1:2", true),
+                        new AlternativaResposta("N:N", false),
+                        new AlternativaResposta("1:N", false),
+                        new AlternativaResposta("1:1", false)
+                         )),
+                 new QuestaoAlternativaResposta(
+                         "Um banco de dados baseado em tabelas, entidades e atributos é do tipo:",
+                        Arrays.asList(
+                        new AlternativaResposta("Cúbico.", false),
+                        new AlternativaResposta("Hierárquico.", false),
+                        new AlternativaResposta("Randômico.", false),
+                        new AlternativaResposta("NoSql.", false),
+                                new AlternativaResposta("Relacional.", true)
                         )
-                )
-        );
+        ));
         QuestaoAlternativaTupla _res = BootstrapData.buildListQuestaoAlternativa(_alternativas, disciplina);
         return _res;
     }
