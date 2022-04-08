@@ -49,8 +49,8 @@ O número de questões por simulado será fixo (5 questões por simulado).
 
 Abaixo estão alguns diagramas representando o banco de dados modelado.
 
-![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/main/img/diagram1.png)
-![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/main/img/diagram2.png)
+![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/12-apresentação-da-aplicação-no-readmemd/img/diagram1.png)
+![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/12-apresentação-da-aplicação-no-readmemd/img/diagram2.png)
 
 ### Entidades
 
