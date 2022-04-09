@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AlternativaRepository extends JpaRepository<Alternativa, Integer> {
-
+    Alternativa findAlternativaById(Integer id);
 }
