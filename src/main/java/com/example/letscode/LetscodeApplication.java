@@ -22,11 +22,11 @@ import java.util.List;
 @AllArgsConstructor
 public class LetscodeApplication implements CommandLineRunner {
 
-	private  ProfessorRepository professorRepository;
-	private  DisciplinaRepository disciplinaRepository;
-	private  QuestaoRepository questaoRepository;
-	private  AlunoRepository alunoRepository;
-	private  AlternativaRepository alternativaRepository;
+	private ProfessorRepository professorRepository;
+	private DisciplinaRepository disciplinaRepository;
+	private QuestaoRepository questaoRepository;
+	private AlunoRepository alunoRepository;
+	private AlternativaRepository alternativaRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(LetscodeApplication.class, args);
