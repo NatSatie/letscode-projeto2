@@ -17,7 +17,7 @@ public class Alternativa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(nullable = false)
+    @Column(columnDefinition="TEXT", nullable = false)
     private String descricao;
     @Column(name = "eh_resposta", nullable = false)
     private Boolean ehResposta;
