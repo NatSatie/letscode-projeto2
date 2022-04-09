@@ -31,19 +31,14 @@ Desenvolva um projeto em grupo (tema livre) que aplique todo o conteúdo deste m
 1. [Apresentação do projeto](#apresentação-do-projeto)
 2. [Diagramas e relações de entidades](#diagramas-e-relações-de-entidades)
 3. [Como clonar e iniciar o projeto](#como-clonar-e-iniciar-o-projeto)
-4. 
-5. [Desenvolvedores] [Como endereçar uma issue e criar uma branch](#como-endereçar-uma-issue-e-criar-uma-branch)
+4. [Desenvolvedores] [Como endereçar uma issue e criar uma branch](#como-endereçar-uma-issue-e-criar-uma-branch)
 
 
 # Apresentação do projeto
 
-O objetivo do projeto proposto é auxiliar os professores na aplicação de provas para seus alunos. Os estudantes irão se inscrever em diferentes disciplinas, essas por sua vez serão ministradas por um único docente. 
+O objetivo do projeto proposto é auxiliar os professores na aplicação de provas para seus alunos. Os estudantes irão se inscrever em diferentes disciplinas, essas por sua vez serão ministradas por um único docente. Vale ressaltar que um professor pode gerenciar mais de uma matéria.
 
-Os professores podem gerenciar diversas matérias, sendo que cada 
-
-O professor 
-
-O número de questões por simulado será fixo (5 questões por simulado).
+O professor de cada disciplina será responsável por inserir as questões relacionadas no banco de dados. Cada simulado terá 5 questões escolhidas aleatoriamente de uma única matéria. Além disso, será mantido um histórico dos simulados realizados pelos alunos referentes às disciplinas inscritas.
 
 # Diagramas e relações de entidades
 
@@ -56,10 +51,10 @@ Abaixo estão alguns diagramas representando o banco de dados modelado.
 
 - **Aluno:** entidade que representa um aluno no sistema;
 - **Professor:** entidade que representa um professor no sistema;
-- **Disciplina:** ;
-- **Questão:** ;
-- **Alternativa:** ; 
-- **Histórico:** entidade que irá guardar o desempenho do aluno em determinada disciplina.
+- **Disciplina:** tabela contendo as disciplinas cadastradas no sistema. Cada disciplina terá um professor responsável;
+- **Questão:** tabela contendo as questões cadastradas pelo professor. As questões deverão estar relacionadas a somente 1 disciplina;
+- **Alternativa:** entidade responsável por armazenar as alternativas de uma questão. A alternativa possui o atributo `eh_resposta` que irá indicar se a mesma é uma alternativa correta ou não;
+- **Histórico:** entidade que irá guardar o desempenho do aluno em determinada disciplina. A coluna `percentual_acerto` armazenará a quantidade de acerto em porcentagem.
 
 # Como clonar e iniciar o projeto
 
@@ -92,8 +87,6 @@ Em `src\main\resources\application.properties` já deve estar configurado para r
 No IntelliJ será necessário substituir o `run` da aplicação em configurações usando `spring-boot::run`. A imagem abaixo é reciclagem de um dos tutoriais que eu fiz.
 
 ![](https://raw.githubusercontent.com/NatSatie/StudyNotes/main/letsCode/setupMavenRun.png)
-
-**_NOTE:_** Tem mais coisa pra adicionar aqui?
 
 
 
@@ -145,5 +138,3 @@ Finalmente tudo comitado e feito podemos fazer o nosso PR. como podemos ver no G
 
 ![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/main/img/passo7.png)
 
-
-**_TODO:_** Terminar tutorial
