@@ -16,9 +16,9 @@ import java.util.List;
 
 @Getter
 public class BootstrapData {
-    public static List<Disciplina> buildDisciplina(Professor professorResponsavel) {
+    public static List<Disciplina> buildDisciplina(Professor professorResponsavel, String nomeDisciplina) {
         return List.of(
-                new Disciplina("Banco de Dados", professorResponsavel)
+                new Disciplina(nomeDisciplina, professorResponsavel)
         );
     }
 
@@ -52,7 +52,7 @@ public class BootstrapData {
                         new AlternativaResposta("Uma chave estrangeira pode ser composta por várias colunas.", true)
                 )),
                 new QuestaoAlternativaResposta(
-                        "Em um banco de dados, uma das principais restrições é a que define que, em uma relação entre duas tabelas, a chave estrangeira que aparece em uma delas deve existir como chave primária na outra, de forma que só será aceito um valor no campo chave estrangeira se esse valor existir no campo chave primária. Tal restrição é conhecida como",
+                        "Em um banco de dados, uma das principais restrições é a que define que, em uma relação entre duas tabelas, a chave estrangeira que aparece em uma delas deve existir como chave primária na outra, de forma q",
                         Arrays.asList(
                         new AlternativaResposta("integridade da coluna.",  false),
                         new AlternativaResposta("integridade referencial.", true),
@@ -109,11 +109,19 @@ public class BootstrapData {
     }
     public static List<Professor> buildProfessor() {
         return List.of(
-                new Professor("Jessé"));
+                new Professor("Justine Mcdowell"),
+                new Professor("Ahmed Moreno"),
+                new Professor("Charity Matthams")
+        );
     }
     public static List<Aluno> buildAluno() {
         return List.of(
-                new Aluno("Carlos Miller", "20220406", LocalDate.of(1976, 04, 17))
+                new Aluno("Humayra Coombes", "20220405", LocalDate.of(1976, 4, 17)),
+                new Aluno("Heidi Gonzalez", "20220407", LocalDate.of(1999, 12, 22)),
+                new Aluno("Zoe Mueller", "20220408", LocalDate.of(1976, 11, 27)),
+                new Aluno("Hadiqa Richards", "20220409", LocalDate.of(1996, 4, 15)),
+                new Aluno("Livia Christensen", "20220410", LocalDate.of(1995, 1, 28)),
+                new Aluno("Alastair Spencer", "20220411", LocalDate.of(1974, 9, 5))
         );
     }
 }
