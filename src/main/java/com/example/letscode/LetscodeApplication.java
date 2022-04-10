@@ -29,18 +29,18 @@ public class LetscodeApplication implements CommandLineRunner {
 	private AlternativaRepository alternativaRepository;
 
 	public static void main(String[] args) {
-		SpringApplication.run(LetscodeApplication.class, args);
+		SpringApplication.run(LetscodeApplication.class, args).close();
 	}
 
 	@Override
 	public void run(String... args)  {
-			System.out.println(alunoRepository.findAlunoById(6));
-			System.out.println(alternativaRepository.findAlternativaById(29));
-			System.out.println(alunoRepository.findIdByNome("Heidi Gonzalez"));
-			System.out.println(alunoRepository.findNomeById(12));
-			System.out.println(professorRepository.findIdByNome("Charity"));
-			System.out.println(disciplinaRepository.findIdByNome("Calculo"));
-			System.out.println(disciplinaRepository.findDisciplinasByProfessorId(58));
+		System.out.println(alunoRepository.findAlunoById(2));
+		System.out.println(alternativaRepository.findAlternativaById(29));
+		System.out.println(alunoRepository.findIdByNome("Heidi Gonzalez"));
+		System.out.println(alunoRepository.findNomeById(12));
+		System.out.println(professorRepository.findProfessorByNome("Charity"));
+		System.out.println(disciplinaRepository.findIdByNome("Calculo"));
+		System.out.println(disciplinaRepository.findDisciplinasByProfessorId(58));
 	}
 }
 
