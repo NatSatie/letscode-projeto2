@@ -12,6 +12,8 @@ import java.util.List;
 public interface DisciplinaRepository extends JpaRepository<Disciplina, Integer> {
     Disciplina findDisciplinaById(Integer id);
 
+    List<Disciplina> findByNomeEquals(String nome);
+
     @Query("SELECT d.id FROM Disciplina d WHERE d.nome LIKE %:nome%")
     List<Integer> findIdByNome(@Param("nome") String nome);
 

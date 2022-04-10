@@ -1,5 +1,6 @@
 package com.example.letscode.aluno;
 
+import com.example.letscode.professor.Professor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -10,6 +11,8 @@ import java.util.List;
 @Repository
 public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
     Aluno findAlunoById(Integer id);
+
+    List<Aluno> findByNomeEquals(String nome);
 
     @Query("SELECT a.id FROM Aluno a WHERE a.nome LIKE %:nome%")
     List<Integer> findIdByNome(@Param("nome") String nome);
