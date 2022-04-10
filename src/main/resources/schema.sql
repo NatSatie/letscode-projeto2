@@ -1,4 +1,4 @@
-create table aluno (
+create table if not exists aluno (
 	id int not null generated always as identity,
 	nome varchar(50) not null,
 	matricula varchar(10) not null,
@@ -6,13 +6,13 @@ create table aluno (
 	constraint aluno_pk primary key (id)
 );
 
-create table professor (
+create table if not exists professor (
 	id int not null generated always as identity,
 	nome varchar(50) not null,
 	constraint professor_pk primary key (id)
 );
 
-create table disciplina (
+create table if not exists disciplina (
 	id int not null generated always as identity,
 	nome varchar(50) not null,
 	professor_id int not null,
@@ -21,7 +21,7 @@ create table disciplina (
 );
 
 
-create table questao (
+create table if not exists questao (
 	id int not null generated always as identity,
 	enunciado text not null,
 	disciplina_id int not null,
@@ -29,7 +29,7 @@ create table questao (
 	constraint questao_pk primary key (id)
 );
 
-create table alternativa (
+create table if not exists alternativa (
 	id int not null generated always as identity,
 	descricao text not null,
 	eh_resposta boolean not null,
@@ -38,7 +38,7 @@ create table alternativa (
 	constraint altenativa_pk primary key (id)
 );
 
-create table historico (
+create table if not exists historico (
 	id int not null generated always as identity,
 	percentual_acerto decimal(2) not null,
 	disciplina_id int not null,
