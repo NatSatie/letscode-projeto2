@@ -29,13 +29,13 @@ public class LetscodeApplication implements CommandLineRunner {
 	private AlternativaRepository alternativaRepository;
 
 	public static void main(String[] args) {
-		SpringApplication.run(LetscodeApplication.class, args);
+		SpringApplication.run(LetscodeApplication.class, args).close();
 	}
 
 	@Override
 	public void run(String... args)  {
 
-		alunoRepository.save(BootstrapDataCrud.buildAluno());
+    alunoRepository.save(BootstrapDataCrud.buildAluno());
 		List<Aluno> listaAluno = alunoRepository.findByNomeEquals("John Doe");
 		Aluno aluno = listaAluno.get(0);
 		aluno.setNome("John Doe Cardoso");
@@ -70,13 +70,6 @@ public class LetscodeApplication implements CommandLineRunner {
 		questaoRepository.delete(questao);
 		disciplinaRepository.delete(disciplina);
 		professorRepository.delete(professor);
-
-
-
-
-
-
-
 
 	}
 }
