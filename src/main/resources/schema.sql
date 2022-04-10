@@ -3,7 +3,8 @@ create table if not exists aluno (
 	nome varchar(50) not null,
 	matricula varchar(10) not null,
 	data_nascimento date not null,
-	constraint aluno_pk primary key (id)
+	constraint aluno_pk primary key (id),
+	constraint matricula_unique UNIQUE (matricula)
 );
 
 create table if not exists professor (
