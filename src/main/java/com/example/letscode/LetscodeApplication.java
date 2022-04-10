@@ -22,11 +22,11 @@ import java.util.List;
 @AllArgsConstructor
 public class LetscodeApplication implements CommandLineRunner {
 
-	private  ProfessorRepository professorRepository;
-	private  DisciplinaRepository disciplinaRepository;
-	private  QuestaoRepository questaoRepository;
-	private  AlunoRepository alunoRepository;
-	private  AlternativaRepository alternativaRepository;
+	private ProfessorRepository professorRepository;
+	private DisciplinaRepository disciplinaRepository;
+	private QuestaoRepository questaoRepository;
+	private AlunoRepository alunoRepository;
+	private AlternativaRepository alternativaRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(LetscodeApplication.class, args);
@@ -34,25 +34,27 @@ public class LetscodeApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-//		List<Aluno> listaAluno = BootstrapData.buildAluno();
-//		alunoRepository.saveAll(listaAluno);
-//		List<Professor> listaProfessor = BootstrapData.buildProfessor();
-//		professorRepository.saveAll(listaProfessor);
-//		List<Disciplina> listaDisciplina = BootstrapData.buildDisciplina(professorRepository.findProfessorById(59));
-//		disciplinaRepository.saveAll(listaDisciplina);
-//		QuestaoAlternativaTupla tupla = BootstrapData.buildQuestaoAlternativaBancoDeDados(disciplinaRepository.findDisciplinaById(1));
-//		questaoRepository.saveAll(tupla.getListaQuestao());
-//		alternativaRepository.saveAll(tupla.getListaAlternativa());
-
-		//		System.out.println(alunoRepository.findAlunoById(6));
-//		System.out.println(alternativaRepository.findAlternativaById(29));
-//		System.out.println(alunoRepository.findIdByNome("Heidi Gonzalez"));
-//		System.out.println(alunoRepository.findNomeById(12));
-//		System.out.println(professorRepository.findIdByNome("Charity"));
-		System.out.println(disciplinaRepository.findIdByNome("Calculo"));
-		System.out.println(disciplinaRepository.findDisciplinasByProfessorId(58));
-
-
+		try {
+			List<Aluno> listaAluno = BootstrapData.buildAluno();
+			alunoRepository.saveAll(listaAluno);
+			List<Professor> listaProfessor = BootstrapData.buildProfessor();
+			professorRepository.saveAll(listaProfessor);
+		} catch (Exception e){
+			e.printStackTrace();
+		} finally {
+			List<Disciplina> listaDisciplina = BootstrapData.buildDisciplina(professorRepository.findProfessorById(1));
+			disciplinaRepository.saveAll(listaDisciplina);
+			QuestaoAlternativaTupla tupla = BootstrapData.buildQuestaoAlternativaBancoDeDados(disciplinaRepository.findDisciplinaById(1));
+			questaoRepository.saveAll(tupla.getListaQuestao());
+			alternativaRepository.saveAll(tupla.getListaAlternativa());
+			System.out.println(alunoRepository.findAlunoById(6));
+			System.out.println(alternativaRepository.findAlternativaById(29));
+			System.out.println(alunoRepository.findIdByNome("Heidi Gonzalez"));
+			System.out.println(alunoRepository.findNomeById(12));
+			System.out.println(professorRepository.findIdByNome("Charity"));
+			System.out.println(disciplinaRepository.findIdByNome("Calculo"));
+			System.out.println(disciplinaRepository.findDisciplinasByProfessorId(58));
+		}
 	}
 }
 

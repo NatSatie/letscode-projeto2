@@ -17,7 +17,7 @@ public class Questao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(nullable = false)
+    @Column(columnDefinition="TEXT", nullable = false)
     private String enunciado;
     @ManyToOne
     @JoinColumn(name = "disciplina_id", nullable = false)
