@@ -4,6 +4,7 @@ import com.example.letscode.alternativa.AlternativaRepository;
 import com.example.letscode.aluno.Aluno;
 import com.example.letscode.aluno.AlunoRepository;
 import com.example.letscode.data.BootstrapData;
+import com.example.letscode.data.BootstrapDataCrud;
 import com.example.letscode.data.QuestaoAlternativaTupla;
 import com.example.letscode.disciplina.Disciplina;
 import com.example.letscode.disciplina.DisciplinaRepository;
@@ -34,13 +35,19 @@ public class LetscodeApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args)  {
-			System.out.println(alunoRepository.findAlunoById(6));
-			System.out.println(alternativaRepository.findAlternativaById(29));
-			System.out.println(alunoRepository.findIdByNome("Heidi Gonzalez"));
-			System.out.println(alunoRepository.findNomeById(12));
-			System.out.println(professorRepository.findIdByNome("Charity"));
-			System.out.println(disciplinaRepository.findIdByNome("Calculo"));
-			System.out.println(disciplinaRepository.findDisciplinasByProfessorId(58));
+		professorRepository.save(BootstrapDataCrud.buildProfessor());
+		List<Professor> listaProfessores = professorRepository.findByNomeEquals("Eugênio");
+		Professor professor = listaProfessores.get(0);
+		professor.setNome("Eugênio De Souza");
+		professorRepository.save(professor);
+		professorRepository.delete(professor);
+
+		alunoRepository.save(BootstrapDataCrud.buildAluno());
+		List<Aluno> listaAluno = alunoRepository.findByNomeEquals("Zoe Mueller");
+		Aluno aluno = listaAluno.get(0);
+		aluno.setNome("Zoe Mueller Cardoso");
+		alunoRepository.save(aluno);
+		alunoRepository.delete(aluno);
 	}
 }
 
