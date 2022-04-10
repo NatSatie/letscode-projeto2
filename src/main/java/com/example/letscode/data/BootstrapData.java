@@ -16,9 +16,9 @@ import java.util.List;
 
 @Getter
 public class BootstrapData {
-    public static List<Disciplina> buildDisciplina(Professor professorResponsavel, String nomeDisciplina) {
+    public static List<Disciplina> buildDisciplina(Professor professorResponsavel) {
         return List.of(
-                new Disciplina(nomeDisciplina, professorResponsavel)
+                new Disciplina("Banco de Dados", professorResponsavel)
         );
     }
 
