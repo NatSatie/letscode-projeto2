@@ -34,13 +34,22 @@ public class LetscodeApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args)  {
-
-    alunoRepository.save(BootstrapDataCrud.buildAluno());
+		alunoRepository.save(BootstrapDataCrud.buildAluno());
 		List<Aluno> listaAluno = alunoRepository.findByNomeEquals("John Doe");
 		Aluno aluno = listaAluno.get(0);
 		aluno.setNome("John Doe Cardoso");
 		alunoRepository.save(aluno);
+		System.out.println("Lista de alunos depois da insercao de John Doe:");
+		for (Aluno i : alunoRepository.findAll()){
+			System.out.println(i.toString());
+		}
+
 		alunoRepository.delete(aluno);
+		System.out.println("Lista de alunos depois do delete de John Doe:");
+		for (Aluno i : alunoRepository.findAll()){
+			System.out.println(i.toString());
+		}
+
 
 		professorRepository.save(BootstrapDataCrud.buildProfessor());
 		List<Professor> listaProfessores = professorRepository.findByNomeEquals("Eugênio");
@@ -48,6 +57,11 @@ public class LetscodeApplication implements CommandLineRunner {
 		professor.setNome("Eugênio De Souza");
 		professorRepository.save(professor);
 
+		System.out.println("-------------------------------");
+		System.out.println("Lista de professores depois da insercao de Eugênio De Souza:");
+		for (Professor i : professorRepository.findAll()){
+			System.out.println(i.toString());
+		}
 
 		disciplinaRepository.save(BootstrapDataCrud.buildDisciplina(professor));
 		List<Disciplina> listaDisciplinas = disciplinaRepository.findByNomeEquals("Programação Web");
@@ -55,11 +69,23 @@ public class LetscodeApplication implements CommandLineRunner {
 		disciplina.setNome("Programação Web Spring");
 		disciplinaRepository.save(disciplina);
 
+		System.out.println("-------------------------------");
+		System.out.println("Lista de disciplinas:");
+		for (Disciplina i : disciplinaRepository.findAll()){
+			System.out.println(i.toString());
+		}
+
 		questaoRepository.save(BootstrapDataCrud.buildQuestao(disciplina));
 		List<Questao>  listaQuestoes = questaoRepository.findQuestaoByEnunciadoEquals("Uma questão muito legal :)");
 		Questao questao = listaQuestoes.get(0);
 		questao.setEnunciado("Uma questão super legal :D");
 		questaoRepository.save(questao);
+
+		System.out.println("-------------------------------");
+		System.out.println("Lista de questoes:");
+		for (Questao i : questaoRepository.findAll()){
+			System.out.println(i.toString());
+		}
 
 		alternativaRepository.saveAll(BootstrapDataCrud.buildAlternativas(questao));
 		List<Alternativa> listaAlternativas = alternativaRepository.findByDescricaoEquals("Essa é a certa! ^^");
@@ -71,6 +97,11 @@ public class LetscodeApplication implements CommandLineRunner {
 		disciplinaRepository.delete(disciplina);
 		professorRepository.delete(professor);
 
+		System.out.println("-------------------------------");
+		System.out.println("Lista de alternativas:");
+		for (Alternativa i : alternativaRepository.findAll()){
+			System.out.println(i.toString());
+		}
 	}
 }
 
