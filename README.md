@@ -32,6 +32,7 @@ Desenvolva um projeto em grupo (tema livre) que aplique todo o conteúdo deste m
 2. [Diagramas e relações de entidades](#diagramas-e-relações-de-entidades)
 3. [Como clonar e iniciar o projeto](#como-clonar-e-iniciar-o-projeto)
 4. [Desenvolvedores] [Como endereçar uma issue e criar uma branch](#como-endereçar-uma-issue-e-criar-uma-branch)
+5. [Demonstração] [#demonstração)
 
 
 # Apresentação do projeto
@@ -138,7 +139,7 @@ Finalmente tudo comitado e feito podemos fazer o nosso PR. como podemos ver no G
 
 ![](https://raw.githubusercontent.com/NatSatie/letscode-projeto2/main/img/passo7.png)
 
-## Demonstração
+# Demonstração
 
 Nesse projeto, ao executá-lo é esperado que ele comece e termine como segue as configurações do `application.properties`.
 
