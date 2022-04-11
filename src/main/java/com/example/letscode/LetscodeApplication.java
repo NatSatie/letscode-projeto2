@@ -50,6 +50,11 @@ public class LetscodeApplication implements CommandLineRunner {
 			System.out.println(i.toString());
 		}
 
+		System.out.println("-------------------------------");
+		System.out.println("Lista de professores antes da insercao de Eugênio De Souza:");
+		for (Professor i : professorRepository.findAll()){
+			System.out.println(i.toString());
+		}
 
 		professorRepository.save(BootstrapDataCrud.buildProfessor());
 		List<Professor> listaProfessores = professorRepository.findByNomeEquals("Eugênio");
@@ -57,7 +62,6 @@ public class LetscodeApplication implements CommandLineRunner {
 		professor.setNome("Eugênio De Souza");
 		professorRepository.save(professor);
 
-		System.out.println("-------------------------------");
 		System.out.println("Lista de professores depois da insercao de Eugênio De Souza:");
 		for (Professor i : professorRepository.findAll()){
 			System.out.println(i.toString());
@@ -92,7 +96,12 @@ public class LetscodeApplication implements CommandLineRunner {
 		Alternativa alternativa = listaAlternativas.get(0);
 		alternativa.setDescricao("Tenho certeza que essa é a certa! :)");
 		alternativaRepository.save(alternativa);
+		System.out.println("-------------------------------");
+		System.out.println("Lista de alternativas da questao - Uma questão super legal :D");
+		System.out.println(alternativaRepository.findAlternativaByQuestao(questao).toString());
+
 		alternativaRepository.deleteAll(alternativaRepository.findAlternativaByQuestao(questao));
+		System.out.println("Lista de alternativas da questao depois de deletar - Uma questão super legal :D");
 		questaoRepository.delete(questao);
 		disciplinaRepository.delete(disciplina);
 		professorRepository.delete(professor);

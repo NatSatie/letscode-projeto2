@@ -193,6 +193,12 @@ Aluno Alastair Spencer; id: 7; matricula: 20220411
 nascido em 1974-09-05
 
 -------------------------------
+Lista de professores antes da insercao de Eugênio De Souza:
+Professor(id=1, nome=Jessé)
+Professor(id=2, nome=Justine Mcdowell)
+Professor(id=3, nome=Ahmed Moreno)
+Professor(id=4, nome=Charity Matthams)
+Professor(id=5, nome=Eugênio De Souza)
 Lista de professores depois da insercao de Eugênio De Souza:
 Professor(id=1, nome=Jessé)
 Professor(id=2, nome=Justine Mcdowell)
@@ -230,6 +236,18 @@ Um banco de dados baseado em tabelas, entidades e atributos é do tipo:
 Questao 7 da disciplina Programação Web Spring
 Uma questão super legal :D
 
+-------------------------------
+Lista de alternativas da questao - Uma questão super legal :D
+[Alternativa(id=29, descricao=Hmmn, essa alternativa é falsa :/, ehResposta=false, questao=Questao 7 da disciplina Programação Web Spring
+Uma questão super legal :D
+), Alternativa(id=30, descricao=Essa também!, ehResposta=false, questao=Questao 7 da disciplina Programação Web Spring
+Uma questão super legal :D
+), Alternativa(id=32, descricao=Tá errado!, ehResposta=false, questao=Questao 7 da disciplina Programação Web Spring
+Uma questão super legal :D
+), Alternativa(id=31, descricao=Tenho certeza que essa é a certa! :), ehResposta=true, questao=Questao 7 da disciplina Programação Web Spring
+Uma questão super legal :D
+)]
+Lista de alternativas da questao depois de deletar - Uma questão super legal :D
 -------------------------------
 Lista de alternativas:
 Alternativa(id=1, descricao=SELECT Tipo, Quantidade-Média FROM Item HAVING Quantidade-Média > 500;, ehResposta=false, questao=Questao 1 da disciplina Banco de Dados
