@@ -29,6 +29,13 @@ public class Aluno {
         this.matricula = matricula;
         this.dataNascimento = dataNascimento;
     }
+
+    @Override
+    public String toString(){
+        String res = "Aluno " + this.nome + "; id: " + this.id + "; matricula: " + this.matricula + "\n\r" +
+                "nascido em " + this.dataNascimento.toString() + "\n\r";
+        return res;
+    }
 }
 
 

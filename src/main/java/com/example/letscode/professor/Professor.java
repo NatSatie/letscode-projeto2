@@ -22,6 +22,5 @@ public class Professor {
     public Professor(String nome) {
         this.nome = nome;
     }
-
 }
 
