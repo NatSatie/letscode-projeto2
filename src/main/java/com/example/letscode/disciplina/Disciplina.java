@@ -27,4 +27,11 @@ public class Disciplina {
         this.nome = nome;
         this.professor = professor;
     }
+
+    @Override
+    public String toString(){
+        String res = "Disciplina " + this.nome + "; id: " + this.id + "\n\r" +
+                "Professor responsavel " + this.professor.getNome() + "\n\r";
+        return res;
+    }
 }

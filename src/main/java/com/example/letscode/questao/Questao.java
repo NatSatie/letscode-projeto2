@@ -27,4 +27,11 @@ public class Questao {
         this.enunciado = enunciado;
         this.disciplina = disciplina;
     }
+
+    @Override
+    public String toString(){
+        String res = "Questao " + this.id + " da disciplina " + this.disciplina.getNome() + "\n\r" +
+                this.enunciado + "\n\r";
+        return res;
+    }
 }
